@@ -25,7 +25,7 @@ case "$host_os" in
 esac
 
 # Initialize the automake subsystem.
-AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+AM_INIT_AUTOMAKE([-Wnone foreign])
 
 #
 # In case we have a Windows build, we pass a 
