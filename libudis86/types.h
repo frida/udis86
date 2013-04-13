@@ -223,6 +223,7 @@ struct ud
   uint8_t   implicit_addr;
   uint8_t   have_modrm;
   uint8_t   modrm;
+  uint8_t   modrm_offset;
   uint8_t   primary_opcode;
   void *    user_opaque_data;
   struct ud_itab_entry * itab_entry;
