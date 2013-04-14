@@ -27,6 +27,9 @@ esac
 # Initialize the automake subsystem.
 AM_INIT_AUTOMAKE([-Wnone foreign])
 
+# Enable silent rules if available
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+
 #
 # In case we have a Windows build, we pass a 
 # TARGET_WINDOWS conditional to automake.
