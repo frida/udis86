@@ -395,7 +395,7 @@ decode_reg(struct ud *u,
            int num,
            int size)
 {
-  int reg;
+  int reg = -1;
   size = resolve_operand_size(u, size);
   switch (type) {
     case REGCLASS_GPR : reg = decode_gpr(u, size, num); break;
@@ -624,7 +624,7 @@ decode_modrm_rm(struct ud         *u,
   }
 
   if (offset) {
-    decode_mem_disp(u, offset, op);
+    decode_mem_disp(u, (unsigned int) offset, op);
   }
 }
 
