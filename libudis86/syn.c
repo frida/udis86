@@ -131,7 +131,7 @@ ud_syn_print_addr(struct ud *u, uint64_t addr)
     name = u->sym_resolver(u, addr, &offset);
     if (name) {
       if (offset) {
-        ud_asmprintf(u, "%s%+lld", name, offset);
+        ud_asmprintf(u, "%s%+lld", name, (long long int) offset);
       } else {
         ud_asmprintf(u, "%s", name);
       }
